@@ -3,6 +3,7 @@ package filedownloader
 import (
 	"net/http"
 	"os"
+	logger "multi-download/lib"
 )
 
 //文件下载器
@@ -46,6 +47,6 @@ func (fd *FileDownloader) Run() error {
 func (fd *FileDownloader) getNewRequest(method string) (*http.Request, error)  {
 	r, err := http.NewRequest(method, fd.Url, nil)
 	if err != nil {
-
+		logger.Logger
 	}
 }
